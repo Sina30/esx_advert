@@ -25,3 +25,17 @@ AddEventHandler('job:advert', function()
 	local xPlayer  = ESX.GetPlayerFromId(_source)
 	TriggerClientEvent('esx:showAdvancedNotification', source, 'Los Santos News', 'Error', 'Please contact a journalist for your ads.', 'CHAR_LIFEINVADER', 1)
 end)
+
+RegisterServerEvent('job:advert')
+AddEventHandler('job:advert', function()
+local _source  = source
+local xPlayer  = ESX.GetPlayerFromId(_source)
+TriggerClientEvent('esx:showAdvancedNotification', xPlayers[i], 'Los Santos News', 'Advert', table.concat(args, " ") ... xPlayer.getName(), 'CHAR_LIFEINVADER', 1)
+end)
+
+RegisterServerEvent('job:advert')
+AddEventHandler('job:advert', function()
+local _source  = source
+local xPlayer  = ESX.GetPlayerFromId(_source)
+TriggerClientEvent('esx:showAdvancedNotification', xPlayers[i], 'Einwohner', ... xPlayer.getName(), 'informiert:', table.concat(args, " "), 'CHAR_LIFEINVADER', 1)
+end)
