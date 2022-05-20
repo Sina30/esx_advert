@@ -38,5 +38,5 @@ RegisterServerEvent('test:advert')
 AddEventHandler('job:advert', function()
 local _source  = source
 local xPlayer  = ESX.GetPlayerFromId(_source)
-TriggerClientEvent('esx:showAdvancedNotification', xPlayers[i], 'Einwohner', ... xPlayer.getName(), 'informiert:', table.concat(args, " "), 'CHAR_LIFEINVADER', 1)
+TriggerClientEvent('esx:showAdvancedNotification', xPlayers[i], 'Einwohner', xPlayer.getName(), 'informiert:', table.concat(args, " "), 'CHAR_LIFEINVADER', 1)
 end)
